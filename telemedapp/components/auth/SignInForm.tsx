@@ -75,65 +75,6 @@ function SignInForm() {
     setFormData((prevForm) => ({ ...prevForm, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    if (!formValid) {
-      return;
-    }
-
-    try {
-      const token = localStorage.getItem("jwt");
-
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_NAME}/login`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          mode: "cors",
-          body: JSON.stringify(formData),
-        }
-      );
-      // const response = {
-      //   ok: true,
-      //   json: async () => ({
-      //     token
-      //   }),
-      // };
-
-      if (!response.ok) {
-        console.log("error in response");
-        if (response.status === 400) {
-          setLoading(false);
-          setSignedIn(false);
-          setError(true);
-        }
-        throw new Error("Failed To Sign In");
-      }
-
-      const users = await response.json();
-      if (tokenAuthentication(users)) {
-        localStorage.setItem("jwt", users.token);
-        localStorage.setItem("expiryDate", users.tokenExpiryDate);
-        localStorage.setItem("userRole", users.userRole);
-
-        localStorage.setItem("userId", users.id);
-        localStorage.setItem("firstName", users.firstName);
-        localStorage.setItem("lastName", users.lastName);
-        setLoading(false);
-        setError(false);
-        setSignedIn(true);
-        router.replace("/");
-      } else {
-        console.log("Error During Token Authentication");
-      }
-    } catch (error) {
-      console.error("Error During Sign In:", error);
-    }
-  };
-
   // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   //   e.preventDefault();
   //   setLoading(true);
@@ -142,45 +83,104 @@ function SignInForm() {
   //   }
 
   //   try {
-  //     setTimeout(async () => {
-  //       // Static token and user data
-  //       const token = "staticToken123";
-  //       const users = {
-  //         token: "staticToken123",
-  //         tokenExpiryDate: "2024-12-31T23:59:59Z",
-  //         userRole: "Patient",
-  //         id: "user123",
-  //         firstName: "Mahmoud",
-  //         lastName: "Mohamed",
-  //       };
+  //     const token = localStorage.getItem("jwt");
 
-  //       if (!users.token) {
-  //         console.log("error in response");
+  //     const response = await fetch(
+  //       `${process.env.NEXT_PUBLIC_SERVER_NAME}/login`,
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         mode: "cors",
+  //         body: JSON.stringify(formData),
+  //       }
+  //     );
+  //     // const response = {
+  //     //   ok: true,
+  //     //   json: async () => ({
+  //     //     token
+  //     //   }),
+  //     // };
+
+  //     if (!response.ok) {
+  //       console.log("error in response");
+  //       if (response.status === 400) {
   //         setLoading(false);
   //         setSignedIn(false);
   //         setError(true);
-  //         throw new Error("Failed To Sign In");
   //       }
+  //       throw new Error("Failed To Sign In");
+  //     }
 
-  //       if (tokenAuthentication(users)) {
-  //         localStorage.setItem("jwt", users.token);
-  //         localStorage.setItem("expiryDate", users.tokenExpiryDate);
-  //         localStorage.setItem("userRole", users.userRole);
-  //         localStorage.setItem("userId", users.id);
-  //         localStorage.setItem("firstName", users.firstName);
-  //         localStorage.setItem("lastName", users.lastName);
-  //         setLoading(false);
-  //         setError(false);
-  //         setSignedIn(true);
-  //         router.replace("/");
-  //       } else {
-  //         console.log("Error During Token Authentication");
-  //       }
-  //     }, 2000); // Simulate loading delay
+  //     const users = await response.json();
+  //     if (tokenAuthentication(users)) {
+  //       localStorage.setItem("jwt", users.token);
+  //       localStorage.setItem("expiryDate", users.tokenExpiryDate);
+  //       localStorage.setItem("userRole", users.userRole);
+
+  //       localStorage.setItem("userId", users.id);
+  //       localStorage.setItem("firstName", users.firstName);
+  //       localStorage.setItem("lastName", users.lastName);
+  //       setLoading(false);
+  //       setError(false);
+  //       setSignedIn(true);
+  //       router.replace("/");
+  //     } else {
+  //       console.log("Error During Token Authentication");
+  //     }
   //   } catch (error) {
   //     console.error("Error During Sign In:", error);
   //   }
   // };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    if (!formValid) {
+      return;
+    }
+
+    try {
+      setTimeout(async () => {
+        // Static token and user data
+        const token = "staticToken123";
+        const users = {
+          token: "staticToken123",
+          tokenExpiryDate: "2024-12-31T23:59:59Z",
+          userRole: "Patient",
+          id: "user123",
+          firstName: "Mahmoud",
+          lastName: "Mohamed",
+        };
+
+        if (!users.token) {
+          console.log("error in response");
+          setLoading(false);
+          setSignedIn(false);
+          setError(true);
+          throw new Error("Failed To Sign In");
+        }
+
+        if (tokenAuthentication(users)) {
+          localStorage.setItem("jwt", users.token);
+          localStorage.setItem("expiryDate", users.tokenExpiryDate);
+          localStorage.setItem("userRole", users.userRole);
+          localStorage.setItem("userId", users.id);
+          localStorage.setItem("firstName", users.firstName);
+          localStorage.setItem("lastName", users.lastName);
+          setLoading(false);
+          setError(false);
+          setSignedIn(true);
+          router.replace("/");
+        } else {
+          console.log("Error During Token Authentication");
+        }
+      }, 2000); // Simulate loading delay
+    } catch (error) {
+      console.error("Error During Sign In:", error);
+    }
+  };
 
   return (
     <div className="p-5 rounded-xl max-w-md m-auto max-h-screen">
