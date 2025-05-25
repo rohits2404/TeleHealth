@@ -32,4 +32,4 @@ const upload = async (req, res) => {
     });
 };
 
-export default { upload };
+export default upload;

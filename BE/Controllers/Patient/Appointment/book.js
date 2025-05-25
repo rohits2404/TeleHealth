@@ -26,4 +26,4 @@ const bookAppointment = async (req, res) => {
 };
 
 
-export default { bookAppointment };
+export default bookAppointment;

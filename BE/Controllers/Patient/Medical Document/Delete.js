@@ -1,4 +1,4 @@
-const database = require('../../../Database/Patient/Medical Document/Delete').default;
+import database from '../../../Database/Patient/Medical Document/Delete.js';
 
 const deleteFile = async (req, res) => {
     const patientId = req.id;
@@ -26,4 +26,4 @@ const deleteFile = async (req, res) => {
 };
 
 
-module.exports = { deleteFile };
+export default deleteFile;

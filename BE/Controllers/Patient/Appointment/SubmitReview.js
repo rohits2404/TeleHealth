@@ -33,4 +33,4 @@ const SubmitReview = async (req, res) => {
   }
 };
 
-export default { SubmitReview };
+export default SubmitReview;

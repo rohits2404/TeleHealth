@@ -1,4 +1,4 @@
-const database = require('../../../Database/Patient/Medical Document/View').default;
+import database from '../../../Database/Patient/Medical Document/View.js';
 
 const view = async (req, res) => {
     const patientId = req.id;
@@ -18,4 +18,4 @@ const view = async (req, res) => {
 };
 
 
-module.exports = { view };
+export default view;

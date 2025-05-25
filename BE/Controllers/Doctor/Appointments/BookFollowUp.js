@@ -21,4 +21,4 @@ const bookFollowUpAppointment = async (req, res) => {
  };
 
 
-export default { bookFollowUpAppointment };
+export default bookFollowUpAppointment;

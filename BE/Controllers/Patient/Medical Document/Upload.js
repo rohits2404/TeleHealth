@@ -1,6 +1,6 @@
-const database = require('../../../Database/Patient/Medical Document/Upload').default;
-const multer = require('multer');
-const uploadMiddleware = multer({ storage: multer.memoryStorage() }).array('files');
+import database from '../../../Database/Patient/Medical Document/Upload.js';
+import multer, { memoryStorage } from 'multer';
+const uploadMiddleware = multer({ storage: memoryStorage() }).array('files');
 
 const upload = async (req, res) => {
     const patientId = req.id;
@@ -36,4 +36,4 @@ const upload = async (req, res) => {
 };
 
 
-module.exports = { upload };
+export default upload;

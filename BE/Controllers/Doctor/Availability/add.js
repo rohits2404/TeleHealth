@@ -22,4 +22,4 @@ const addAvailability = async (req, res) => {
     return res.status(500).json({ message: 'Error adding timeslots' });
   }
 };
-export default { addAvailability};
+export default addAvailability;

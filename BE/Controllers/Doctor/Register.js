@@ -96,4 +96,4 @@ const doctorRegister = async (req, res) => {
   return res.status(400).json({ message });
 };
 
-export default { doctorRegister };
+export default doctorRegister;

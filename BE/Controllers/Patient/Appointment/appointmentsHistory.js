@@ -19,4 +19,4 @@ const appointmentsHistory = async (req, res) => {
     }
   };
 
-export default { appointmentsHistory };
+export default appointmentsHistory;

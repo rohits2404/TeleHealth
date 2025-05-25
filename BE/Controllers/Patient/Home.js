@@ -40,4 +40,4 @@ const home = async (req, res) => {
     return res.json(doctors);
 };
 
-export default { home };
+export default home;

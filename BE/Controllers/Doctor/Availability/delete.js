@@ -1,4 +1,4 @@
-const database = require('../../../Database/Doctor/Availability/Delete').default;
+import database from "../../../Database/Doctor/Availability/delete.js"
 
 const deleteAvailability = async (req, res) => {
     try {
@@ -21,4 +21,4 @@ const deleteAvailability = async (req, res) => {
       return res.status(500).json({ message: 'Error deleting timeslots' });
     }
   };
-module.exports = { deleteAvailability };
+export default deleteAvailability;

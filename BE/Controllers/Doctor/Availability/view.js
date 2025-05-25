@@ -1,4 +1,4 @@
-const database = require('../../../Database/Doctor/Availability/view').default;
+import database from '../../../Database/Doctor/Availability/view.js';
 const viewDoctorTimeslots = async (req, res) => {
     try {
       const doctorId = req.id; // Assuming doctor ID is available in req.id
@@ -15,4 +15,4 @@ const viewDoctorTimeslots = async (req, res) => {
       res.status(500).json({ message: 'Error retrieving timeslots' });
     }
   };
-module.exports = { viewDoctorTimeslots};
+export default { viewDoctorTimeslots};

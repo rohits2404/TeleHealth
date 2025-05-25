@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { doctorAppointmentResponse } from '../../Controllers/Doctor/Appointments/AppointmentResponse.js';
+import doctorAppointmentResponse from '../../Controllers/Doctor/Appointments/AppointmentResponse.js';
 import { tokenAuthentication } from '../../middleware/User/Authentication.js';
 const router = Router();
 

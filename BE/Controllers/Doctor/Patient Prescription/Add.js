@@ -32,4 +32,4 @@ const addPatientPrescription = async (req, res) => {
     }
 };
 
-export default { addPatientPrescription};
+export default addPatientPrescription;

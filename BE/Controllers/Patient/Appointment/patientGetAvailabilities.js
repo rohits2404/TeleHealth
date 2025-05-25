@@ -16,4 +16,4 @@ console.log(doctorId);
   }
 };
 
-export default { patientGetAvailabilities };
+export default patientGetAvailabilities;

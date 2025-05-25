@@ -18,4 +18,4 @@ const pendingappointments = async (req, res) => {
     }
   };
 
-export default { pendingappointments };
+export default pendingappointments;
