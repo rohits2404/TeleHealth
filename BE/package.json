@@ -7,7 +7,7 @@
     "start": "node app.js",
     "dev": "node --watch app.js"
   },
-  "type": "commonjs",
+  "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {
