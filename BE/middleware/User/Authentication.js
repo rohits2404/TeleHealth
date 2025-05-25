@@ -2,7 +2,7 @@ import pkg from "jsonwebtoken";
 const {verify} = pkg;
 const { ACCESS_TOKEN_SECRET_KEY } = process.env;
 
-const tokenAuthentication = (req, res, next) => {
+export const tokenAuthentication = (req, res, next) => {
   const authHeader = req.headers["authorization"];
   if (!authHeader) {
     return res.status(401).json({ message: "Authorization header missing" });
@@ -25,4 +25,3 @@ const tokenAuthentication = (req, res, next) => {
     next();
   });
 };
-export default { tokenAuthentication };
