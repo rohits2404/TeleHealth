@@ -1,5 +1,5 @@
 import database from '../../../Database/Doctor/AppointmentResults.js';
-import Notifications from '../../notifications';
+import Notifications from '../../notifications.js';
 const { addNotification } = Notifications;
 
 // Appointment result submission form

@@ -1,5 +1,5 @@
 import database from '../../../Database/Doctor/AppointmentResponse.js';
-import Notifications from '../../notifications';
+import Notifications from '../../notifications.js';
 const { addNotification } = Notifications;
 // confirm /decline appointments requests
 
