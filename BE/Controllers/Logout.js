@@ -13,4 +13,4 @@ const logout = (req, res) => {
     return res.json({ message: message });
 };
 
-module.exports = { logout };
+export default logout;
