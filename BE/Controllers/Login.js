@@ -47,4 +47,4 @@ const login = async (req, res) => {
     return res.json({ message: 'Login successful', token: token, Notifications: unreadCount  });
 }
 
-export default { login };
+export default login;
