@@ -3,7 +3,7 @@ import { getAllPatients, getPatientInfo, getPatientAppointments, changePatientSt
 import AppointmentDetails from '../../Controllers/backOffice/appointmentDetails.js';
 import { tokenAuthentication } from '../../middleware/User/Authentication.js'
 
-import Utilities from "../../Utilities";
+import Utilities from "../../Utilities.js";
 const { restrictTo } = Utilities;
 
 const router = Router();
