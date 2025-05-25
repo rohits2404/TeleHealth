@@ -1,7 +1,8 @@
 import { Pool } from 'pg';
 import pkg from 'bcryptjs';
 const { compare, hash } = pkg;
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 const saltRounds = 10;
 
 const { PGHOST, PGDATABASE, PGUSER, PGPORT } = process.env;

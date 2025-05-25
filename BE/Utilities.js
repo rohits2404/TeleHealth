@@ -1,7 +1,8 @@
 import { query } from "express";
 import pkg from 'jsonwebtoken';
 const { sign } = pkg;
-require("dotenv").config();
+import dotenv from 'dotenv';
+dotenv.config();
 const { ACCESS_TOKEN_EXPIRATION_IN_DAYS, ACCESS_TOKEN_SECRET_KEY } =
   process.env;
 

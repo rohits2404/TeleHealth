@@ -1,5 +1,6 @@
 import { Pool } from 'pg';
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 import pkg from "bcryptjs"
 const { hash } = pkg;
 const saltRounds = 10;

@@ -1,5 +1,6 @@
 import { Pool } from "pg";
-require("dotenv").config();
+import dotenv from 'dotenv';
+dotenv.config();
 var catchAsyncError = require("../../Utilities").default.catchAsyncError;
 const { PGHOST, PGDATABASE, PGUSER, PGPORT } = process.env;
 let PGPASSWORD = process.env.PGPASSWORD;

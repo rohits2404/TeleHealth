@@ -1,5 +1,6 @@
 import { Pool } from 'pg';
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 const { PGHOST, PGDATABASE, PGUSER, PGPORT } = process.env;
 let PGPASSWORD = process.env.PGPASSWORD;

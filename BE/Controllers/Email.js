@@ -2,7 +2,8 @@ import database from '../Database/Email.js';
 import Utilities from '../Utilities.js';
 const { createResetPasswordToken, passwordValidation } = Utilities;
 import { createTransport } from 'nodemailer';
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 const verifyResetPasswordEmail = async (req, res) => {
     const { email } = req.body;
