@@ -5,7 +5,7 @@ const { catchAsyncError } = _default;
 import __default from "../../Database/Patient/Profile.js";
 const { retrievePatientInfo } = __default;
 import { retrieveAllPatients, retrieveAllDoctors, retrieveApppointmentsDetails } from "../../Database/backOffice/backOfficeModel.js";
-import { changePatientState, changePersonState } from "../../Database/backOffice/backOfficeModel.js";
+import {  changePersonState } from "../../Database/backOffice/backOfficeModel.js";
 import ___default from "../../Utilities.js";
 const { queryHandler } = ___default;
 import { emit } from "nodemon";
