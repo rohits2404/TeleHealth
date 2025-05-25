@@ -1,7 +1,8 @@
 import database from "../../Database/Patient/Register.js";
 import Utilities from "../../Utilities.js";
 const { passwordValidation } = Utilities;
-import { hash } from "bcryptjs";
+import pkg from 'bcryptjs';
+const { hash } = pkg;
 const saltRounds = 10;
 
 const patientRegister = async (req, res) => {

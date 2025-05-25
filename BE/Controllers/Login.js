@@ -1,4 +1,5 @@
-import { compare } from 'bcryptjs';
+import pkg from 'bcryptjs';
+const { compare } = pkg;
 import database from '../Database/Login.js';
 import Utilities from '../Utilities.js';
 const { createToken } = Utilities;
