@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { editInfo, editPassword } from '../../Controllers/Patient/Edit.js';
-import { tokenAuthentication } from '../../Middleware/User/Authentication.js';
+import { tokenAuthentication } from "../../middleware/User/Authentication.js"
 
 const router = Router();
 
