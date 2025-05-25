@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { bookFollowUpAppointment } from '../../Controllers/Doctor/Appointments/BookFollowUp.js';
-import { tokenAuthentication } from '../../Middleware/User/Authentication.js';
+import { tokenAuthentication } from '../../middleware/User/Authentication.js';
 const router = Router();
 
 

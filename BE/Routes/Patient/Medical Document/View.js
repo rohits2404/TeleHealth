@@ -1,5 +1,5 @@
 import { view } from '../../../Controllers/Patient/Medical Document/View.js';
-import { tokenAuthentication } from '../../../Middleware/User/Authentication.js';
+import { tokenAuthentication } from '../../../middleware/User/Authentication.js';
 import { Router } from 'express';
 const router = Router();
 

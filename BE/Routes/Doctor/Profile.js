@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { doctorInfo, doctorPatients, doctorAppointments, doctor_Further_Informtion, doctorReviews, doctorPendingRequests, doctorDeclinedRequests, addDoctorExperience, addDoctorEducation, addDoctorLanguage, addDoctorInterest, deleteDoctorExperience, deleteDoctorEducation, deleteDoctorLanguage, deleteDoctorInterest } from "../../Controllers/Doctor/Profile.js";
-import { tokenAuthentication } from "../../Middleware/User/Authentication.js";
+import { tokenAuthentication } from "../../middleware/User/Authentication.js";
 
 const router = Router();
 

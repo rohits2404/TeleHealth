@@ -6,7 +6,7 @@ import { pendingappointments } from '../../../Controllers/Patient/Appointment/pe
 import { AppointmentDetails } from '../../../Controllers/Patient/Appointment/appointmentDetails.js';
 import { SubmitReview } from '../../../Controllers/Patient/Appointment/SubmitReview.js';
 
-import { tokenAuthentication } from '../../../Middleware/User/Authentication.js';
+import { tokenAuthentication } from '../../../middleware/User/Authentication.js';
 const router = Router();
 
 
