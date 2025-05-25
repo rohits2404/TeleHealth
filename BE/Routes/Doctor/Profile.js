@@ -1,25 +1,25 @@
 import { Router } from "express";
-import { doctorInfo, doctorPatients, doctorAppointments, doctor_Further_Informtion, doctorReviews, doctorPendingRequests, doctorDeclinedRequests, addDoctorExperience, addDoctorEducation, addDoctorLanguage, addDoctorInterest, deleteDoctorExperience, deleteDoctorEducation, deleteDoctorLanguage, deleteDoctorInterest } from "../../Controllers/Doctor/Profile.js";
+import  doctorController from "../../Controllers/Doctor/Profile.js";
 import { tokenAuthentication } from "../../middleware/User/Authentication.js";
 
 const router = Router();
 
-router.get("/info", tokenAuthentication, doctorInfo);
+router.get("/info", tokenAuthentication, doctorController.doctorInfo);
 router.get(
   "/patients",
   tokenAuthentication,
-  doctorPatients
+  doctorController.doctorPatients
 );
 router.get(
   "/appointments",
   tokenAuthentication,
-  doctorAppointments
+  doctorController.doctorAppointments
 );
 // router.get('/availabilities', tokenAuthentication, doctorProfileController.doctorAvailabilities);
 router.get(
   "/DoctorFurtherInformation",
   tokenAuthentication,
-  doctor_Further_Informtion
+  doctorController.doctor_Further_Informtion
 );
 // router.get('/experience', tokenAuthentication, doctorProfileController.doctorExperience);
 // router.get('/education', tokenAuthentication, doctorProfileController.doctorEducation);
@@ -27,28 +27,28 @@ router.get(
 router.get(
   "/reviews",
   tokenAuthentication,
-  doctorReviews
+  doctorController.doctorReviews
 );
 router.get(
   "/PendingRequests",
   tokenAuthentication,
-  doctorPendingRequests
+  doctorController.doctorPendingRequests
 );
 router.get(
   "/DeclinedRequests",
   tokenAuthentication,
-  doctorDeclinedRequests
+  doctorController.doctorDeclinedRequests
 );
 
-router.post("/experience", tokenAuthentication, addDoctorExperience);
-router.post("/education", tokenAuthentication, addDoctorEducation);
-router.post("/languages", tokenAuthentication, addDoctorLanguage);
-router.post("/interests", tokenAuthentication, addDoctorInterest);
+router.post("/experience", tokenAuthentication, doctorController.addDoctorExperience);
+router.post("/education", tokenAuthentication, doctorController.addDoctorEducation);
+router.post("/languages", tokenAuthentication, doctorController.addDoctorLanguage);
+router.post("/interests", tokenAuthentication, doctorController.addDoctorInterest);
 
 // Delete routes
-router.delete("/experience/:doctor_experience_id", tokenAuthentication, deleteDoctorExperience);
-router.delete("/education/:doctor_education_id", tokenAuthentication, deleteDoctorEducation);
-router.delete("/languages/:language_id", tokenAuthentication, deleteDoctorLanguage);
-router.delete("/interests/:doctor_interest_id", tokenAuthentication, deleteDoctorInterest);
+router.delete("/experience/:doctor_experience_id", tokenAuthentication, doctorController.deleteDoctorExperience);
+router.delete("/education/:doctor_education_id", tokenAuthentication, doctorController.deleteDoctorEducation);
+router.delete("/languages/:language_id", tokenAuthentication, doctorController.deleteDoctorLanguage);
+router.delete("/interests/:doctor_interest_id", tokenAuthentication, doctorController.deleteDoctorInterest);
 
 export default router;

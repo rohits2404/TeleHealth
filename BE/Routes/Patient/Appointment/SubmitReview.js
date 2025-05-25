@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { SubmitReview } from '../../../Controllers/Patient/Appointment/SubmitReview.js';
+import SubmitReview from '../../../Controllers/Patient/Appointment/SubmitReview.js';
 const router = Router();
 
 
