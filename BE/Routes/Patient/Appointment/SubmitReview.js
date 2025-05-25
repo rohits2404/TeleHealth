@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { SubmitReview } from '../../../Controllers/Patient/Appointment/SubmitReview.js';
 
-import { tokenAuthentication } from '../../../Middleware/User/Authentication';
+import { tokenAuthentication } from '../../../Middleware/User/Authentication.js';
 const router = Router();
 
 
