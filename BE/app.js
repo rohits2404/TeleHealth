@@ -47,39 +47,39 @@ app.use(json());
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-app.use("/login", userLoginRoute);
-app.use("/logout", userLogoutRoute);
-app.use("/patient/register", patientRegisterRoute);
-app.use("/doctor/register", doctorRegisterRoute);
-app.use("/patient/profile", patienProfileRoute);
-app.use("/patient/edit", patientEditRoute);
-app.use("/patient/appointment", patientAppointmentBookRoute); 
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/login", userLoginRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/logout", userLogoutRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/patient/register", patientRegisterRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/doctor/register", doctorRegisterRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/patient/profile", patienProfileRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/patient/edit", patientEditRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/patient/appointment", patientAppointmentBookRoute); 
 // app.use("/patient/appointment", patientSubmitReviewRoute);doblecated end piont moved to patientAppointmentBookRoute
-app.use("/patient/home", patientHomeRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/patient/home", patientHomeRoute);
 // app.use('/patient/prescription/add',patientAddPrescriptionRoute);
 // app.use('/patient/prescription/view',patientViewPrescriptionRoute);
 // app.use('/patient/prescription/delete',patientDeletePrescriptionRoute);
-app.use("/patient/medical-document/upload", patientUploadMedicalDocumentRoute);
-app.use("/patient/medical-document/view", patientViewMedicalDocumentRoute);
-app.use("/patient/medical-document/delete", patientDeleteMedicalDocumentRoute);
-app.use("/doctor/edit", doctorEditRoute);
-app.use("/doctor/profile", doctorProfileRoute);
-app.use("/doctor/availability", doctorAvailabilityRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/patient/medical-document/upload", patientUploadMedicalDocumentRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/patient/medical-document/view", patientViewMedicalDocumentRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/patient/medical-document/delete", patientDeleteMedicalDocumentRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/doctor/edit", doctorEditRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/doctor/profile", doctorProfileRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/doctor/availability", doctorAvailabilityRoute);
 // app.use('/doctor/availability/delete', doctorDeleteAvailabilityRoute);
-app.use("/doctor/profile-picture/upload", doctorProfilePictureUploadRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/doctor/profile-picture/upload", doctorProfilePictureUploadRoute);
 // app.use('/doctor/patient-prescription/add', doctorPatientPrescriptionAddRoute);
-app.use("/doctor/AppointmentResponse", doctorAppointmentResponseAddRoute);
-app.use("/doctor/BookFollowUp", doctorFollowUpAppointmentAddRoute);
-app.use("/doctor/AppointmentResults", doctorAppointmentResultsAddRoute);
-app.use("/doctor/appointmentHistory", doctorAppointmentHistoryRoute);
-app.use("/doctor/appointmentDetails", doctorAppointmentDetailsRoute);
-app.use("/doctor/PatientSummary", doctorPatientsummaryRoute);
-app.use("/appointment-chat", chatRoute);
-app.use("/notifications", notificationsRoute);
-app.use("/email-service", emailRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/doctor/AppointmentResponse", doctorAppointmentResponseAddRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/doctor/BookFollowUp", doctorFollowUpAppointmentAddRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/doctor/AppointmentResults", doctorAppointmentResultsAddRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/doctor/appointmentHistory", doctorAppointmentHistoryRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/doctor/appointmentDetails", doctorAppointmentDetailsRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/doctor/PatientSummary", doctorPatientsummaryRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/appointment-chat", chatRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/notifications", notificationsRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/email-service", emailRoute);
 
 /// backOffice
-app.use("/backOffice", backOfficeRoute);
+app.use("(https://telemedicine-pilot-d2anbuaxedbfdba9.southafricanorth-01.azurewebsites.net)/backOffice", backOfficeRoute);
 app.use("/", (req, res, next) => {
   res.status(404).json({
     status: "fail",
