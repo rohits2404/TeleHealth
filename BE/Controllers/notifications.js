@@ -1,5 +1,5 @@
 import bcrypt from 'bcryptjs';
-import database from '../Database/notifications';
+import database from '../Database/notifications.js';
 import Utilities from '../Utilities.js';
 const { createToken } = Utilities;
 const { ACCESS_TOKEN_EXPIRATION_IN_MILLISECONDS } = process.env;
