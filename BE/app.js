@@ -32,7 +32,7 @@ import doctorAvailabilityRoute from "./Routes/Doctor/Availability.js";
 import notificationsRoute from "./Routes/notifications.js";
 import emailRoute from "./Routes/Email.js";
 import chatRoute from "./Routes/Chat.js";
-import { globalErrorHanlder } from "./Utilities.js";
+import Utilities from "./Utilities.js";
 const port = process.env.PORT || 4000;
 const app = express();
 
@@ -88,7 +88,7 @@ app.use("/", (req, res, next) => {
   });
 });
 
-app.use(globalErrorHanlder);
+app.use(Utilities.globalErrorHanlder);
 
 app.listen(port, (error) => {
   if (error) {
