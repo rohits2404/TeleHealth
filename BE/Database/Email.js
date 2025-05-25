@@ -1,6 +1,7 @@
 import { Pool } from 'pg';
 require('dotenv').config();
-import { hash } from 'bcryptjs';
+import pkg from "bcryptjs"
+const { hash } = pkg;
 const saltRounds = 10;
 
 const { PGHOST, PGDATABASE, PGUSER, PGPORT } = process.env;
