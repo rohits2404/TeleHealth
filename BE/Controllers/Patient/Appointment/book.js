@@ -1,4 +1,4 @@
-import database from '../../../Database/Patient/Appointment/Book.js';
+import database from '../../../Database/Patient/Appointment/book.js';
 import Notifications from '../../notifications.js';
 const { sendPushNotification, addNotification } = Notifications;
 
