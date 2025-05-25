@@ -1,4 +1,5 @@
-import { verify } from "jsonwebtoken";
+import pkg from "jsonwebtoken";
+const {verify} = pkg;
 const { ACCESS_TOKEN_SECRET_KEY } = process.env;
 
 const tokenAuthentication = (req, res, next) => {
