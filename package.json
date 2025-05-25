@@ -2,10 +2,10 @@
   "name": "nodejs-complete-guide",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "BE/app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "node --watch app.js"
+    "start": "BE/node app.js",
+    "dev": "BE/node --watch app.js"
   },
   "type": "module",
   "author": "",
