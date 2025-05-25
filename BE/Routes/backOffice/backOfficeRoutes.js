@@ -3,7 +3,8 @@ import { getAllPatients, getPatientInfo, getPatientAppointments, changePatientSt
 import AppointmentDetails from '../../Controllers/backOffice/appointmentDetails.js';
 import { tokenAuthentication } from '../../middleware/User/Authentication.js'
 
-var restrictTo = require("../../Utilities").default.restrictTo;
+import Utilities from "../../Utilities";
+const { restrictTo } = Utilities;
 
 const router = Router();
 
